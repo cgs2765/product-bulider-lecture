@@ -1,24 +1,49 @@
+:root {
+    --bg-color: #f0f0f0;
+    --container-bg: #fff;
+    --text-color: #333;
+    --shadow-color: rgba(0,0,0,0.1);
+    --ball-shadow: rgba(0,0,0,0.2);
+    --btn-bg: #4CAF50;
+    --btn-hover-bg: #45a049;
+    --btn-glow: rgba(76, 175, 80, 0.7);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #f0f0f0;
+    --shadow-color: rgba(0,0,0,0.5);
+    --ball-shadow: rgba(0,0,0,0.6);
+    --btn-bg: #388E3C;
+    --btn-hover-bg: #2E7D32;
+    --btn-glow: rgba(56, 142, 60, 0.5);
+}
+
 body {
     font-family: sans-serif;
-    background-color: #f0f0f0;
+    background-color: var(--bg-color);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    transition: background-color 0.3s ease;
 }
 
 .container {
-    background-color: #fff;
+    background-color: var(--container-bg);
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px var(--shadow-color), 0 6px 6px var(--shadow-color);
     text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 30px;
     font-size: 2.5rem;
 }
@@ -41,13 +66,13 @@ h1 {
     font-size: 1.8rem;
     font-weight: bold;
     color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px var(--ball-shadow);
     transform: scale(0);
     animation: popIn 0.5s ease-in-out forwards;
 }
 
 .generate-btn {
-    background-color: #4CAF50;
+    background-color: var(--btn-bg);
     color: white;
     padding: 15px 30px;
     border: none;
@@ -55,12 +80,29 @@ h1 {
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px var(--shadow-color);
 }
 
 .generate-btn:hover {
-    background-color: #45a049;
-    box-shadow: 0 0 20px rgba(76, 175, 80, 0.7);
+    background-color: var(--btn-hover-bg);
+    box-shadow: 0 0 20px var(--btn-glow);
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(128, 128, 128, 0.1);
 }
 
 @keyframes popIn {

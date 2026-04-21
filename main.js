@@ -1,5 +1,6 @@
 const generateBtn = document.querySelector('.generate-btn');
 const numberDisplay = document.querySelector('.number-display');
+const themeToggle = document.getElementById('theme-toggle');
 
 const getNumberColor = (number) => {
     if (number <= 10) return '#fbc400';
@@ -28,5 +29,19 @@ const generateLottoNumbers = () => {
         numberDisplay.appendChild(ball);
     });
 };
+
+// Theme Toggle Logic
+const currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
+themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '🌞';
+
+themeToggle.addEventListener('click', () => {
+    const theme = document.documentElement.getAttribute('data-theme');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    themeToggle.textContent = newTheme === 'dark' ? '🌙' : '🌞';
+});
 
 generateBtn.addEventListener('click', generateLottoNumbers);
