@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Shaolin's Lucky Lotto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,11 +17,12 @@
     </div>
     <div class="container">
         <header>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌞</button>
-            <h1>Lotto <span>Master</span></h1>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌸</button>
+            <h2 class="welcome-text">Best Luck for</h2>
+            <h1>Shaolin's <span>Lotto</span></h1>
             <div class="stats-bar">
-                <div class="stat-item">Draws: <span id="draw-count">0</span></div>
-                <div class="stat-item">Lucky Score: <span id="lucky-score">0</span>%</div>
+                <div class="stat-item">Lucky Draws: <span id="draw-count">0</span></div>
+                <div class="stat-item">Magic Score: <span id="lucky-score">0</span>%</div>
             </div>
         </header>
 
@@ -34,36 +35,37 @@
                 <div class="inner-ball" style="--delay: 0.8s; --top: 30%; --left: 70%;"></div>
                 <div class="inner-ball" style="--delay: 0.2s; --top: 60%; --left: 40%;"></div>
             </div>
+            <div class="machine-heart">💖</div>
             <div class="machine-exit"></div>
         </div>
 
         <div class="number-display" id="number-display">
-            <div class="placeholder-text">Ready to draw?</div>
+            <div class="placeholder-text">Click for your lucky moment, Shaolin!</div>
         </div>
 
         <div class="controls">
             <button class="generate-btn" id="generate-btn">
-                <span class="btn-text">Start Drawing!</span>
-                <span class="btn-icon">🕹️</span>
+                <span class="btn-text">Generate Fortune</span>
+                <span class="btn-icon">✨</span>
             </button>
         </div>
 
         <div class="history-section">
-            <h3>Recent History</h3>
+            <h3>Recent Fortunes</h3>
             <ul id="history-list">
-                <li class="empty-msg">No history yet</li>
+                <li class="empty-msg">No fortunes yet</li>
             </ul>
         </div>
 
         <div class="inquiry-section">
-            <h3>Affiliate Inquiry</h3>
+            <h3>Send a Message</h3>
             <form action="https://formspree.io/f/mqewyjdj" method="POST" id="inquiry-form">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
-                <textarea name="message" rows="3" placeholder="How can we help you?" required></textarea>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <textarea name="message" rows="3" placeholder="Write your lucky story..." required></textarea>
+                <button type="submit" class="submit-btn">Send with Love</button>
             </form>
         </div>
     </div>

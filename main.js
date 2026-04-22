@@ -8,12 +8,13 @@ const themeToggle = document.getElementById('theme-toggle');
 
 let drawCount = 0;
 
+// Soft Pastel Colors for balls
 const COLORS = {
-    yellow: '#fbbf24',
-    blue: '#38bdf8',
-    red: '#f87171',
-    grey: '#94a3b8',
-    green: '#4ade80'
+    yellow: '#fef08a',
+    blue: '#bfdbfe',
+    red: '#fecaca',
+    grey: '#e5e7eb',
+    green: '#bbf7d0'
 };
 
 const getNumberColor = (number) => {
@@ -27,8 +28,8 @@ const getNumberColor = (number) => {
 const updateStats = () => {
     drawCount++;
     drawCountSpan.textContent = drawCount;
-    // Simulate a "Lucky Score" based on draw count and random factor
-    const score = Math.floor(Math.random() * 30) + 70; 
+    // Magic score between 80-100 for Shaolin
+    const score = Math.floor(Math.random() * 21) + 80; 
     luckyScoreSpan.textContent = score;
 };
 
@@ -41,23 +42,19 @@ const addToHistory = (numbers) => {
     
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     
-    let numbersHtml = '<div class="history-numbers">';
+    let numbersHtml = '<div class="history-numbers" style="display: flex; gap: 4px;">';
     numbers.forEach(num => {
-        numbersHtml += `<div class="hist-ball" style="background-color: ${getNumberColor(num)}">${num}</div>`;
+        numbersHtml += `<div class="hist-ball" style="background-color: ${getNumberColor(num)}; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: #881337; font-weight: 700;">${num}</div>`;
     });
     numbersHtml += '</div>';
 
     li.innerHTML = `
-        <span>${time}</span>
+        <span style="color: #be123c;">${time}</span>
         ${numbersHtml}
     `;
 
     historyList.prepend(li);
-    
-    // Keep only last 5
-    if (historyList.children.length > 5) {
-        historyList.lastElementChild.remove();
-    }
+    if (historyList.children.length > 5) historyList.lastElementChild.remove();
 };
 
 const startDraw = () => {
@@ -71,7 +68,6 @@ const startDraw = () => {
     }
     const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
 
-    // Draw one by one with delay
     sortedNumbers.forEach((num, i) => {
         setTimeout(() => {
             const ball = document.createElement('div');
@@ -86,21 +82,25 @@ const startDraw = () => {
                 updateStats();
                 addToHistory(sortedNumbers);
             }
-        }, (i + 1) * 800); // 0.8s interval for tension
+        }, (i + 1) * 700);
     });
 };
 
-// Theme Logic
+// Theme Toggle
+const updateThemeIcon = (theme) => {
+    themeToggle.textContent = theme === 'dark' ? '✨' : '🌸';
+};
+
 const currentTheme = localStorage.getItem('theme') || 'light';
 document.documentElement.setAttribute('data-theme', currentTheme);
-themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '🌞';
+updateThemeIcon(currentTheme);
 
 themeToggle.addEventListener('click', () => {
     const theme = document.documentElement.getAttribute('data-theme');
     const newTheme = theme === 'light' ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
-    themeToggle.textContent = newTheme === 'dark' ? '🌙' : '🌞';
+    updateThemeIcon(newTheme);
 });
 
 generateBtn.addEventListener('click', startDraw);
