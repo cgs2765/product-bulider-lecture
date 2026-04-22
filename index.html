@@ -1,105 +1,186 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google AdSense - 최상단 배치 유지 -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6088674674134375" crossorigin="anonymous"></script>
     <meta name="google-adsense-account" content="ca-pub-6088674674134375">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>곰팡이 해결사 (Mold Master) - 맞춤 솔루션 추천</title>
+    <title>곰팡이 해결사 (Mold Master) | 전문 제거 솔루션 및 예방 가이드</title>
+    <meta name="description" content="화장실, 벽지, 베란다 등 장소별 맞춤형 곰팡이 제거 솔루션과 예방 팁을 제공하는 전문 가이드 사이트입니다.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">🛡️ Mold Master</a>
+            <ul class="nav-menu">
+                <li><a href="#recommend">맞춤 추천</a></li>
+                <li><a href="#encyclopedia">곰팡이 백과사전</a></li>
+                <li><a href="#tips">예방 팁</a></li>
+                <li><a href="#inquiry">전문 상담</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="background-decor">
         <div class="circle circle-1"></div>
         <div class="circle circle-2"></div>
     </div>
+
     <div class="container">
-        <header>
-            <div class="logo">🛡️ Mold Master</div>
-            <h2 class="welcome-text">곰팡이 고민, 전문가의 추천으로 해결하세요</h2>
+        <header class="main-header">
+            <h2 class="welcome-text">정확한 원인 분석과 전문적인 해결책</h2>
             <h1>곰팡이 <span>해결사</span></h1>
+            <p class="header-desc">단순한 제거를 넘어, 당신의 주거 환경을 건강하게 지키는 전문 솔루션을 제안합니다.</p>
         </header>
 
-        <main class="recommendation-engine">
+        <main class="recommendation-engine" id="recommend">
             <section id="step-1" class="step">
-                <h3>Step 1. 어디에 곰팡이가 생겼나요?</h3>
+                <div class="step-header">
+                    <span class="step-number">01</span>
+                    <h3>어디에 곰팡이가 생겼나요?</h3>
+                </div>
                 <div class="card-grid">
                     <button class="choice-card" data-place="bathroom">
                         <span class="icon">🚿</span>
-                        <span class="label">화장실<br>(타일/실리콘)</span>
+                        <span class="label">화장실 및 욕실<br><small>타일 줄눈, 실리콘, 천장</small></span>
                     </button>
                     <button class="choice-card" data-place="wallpaper">
                         <span class="icon">🏠</span>
-                        <span class="label">거실/방<br>(벽지/벽면)</span>
+                        <span class="label">거실 및 침실<br><small>벽지, 벽면, 가구 뒤</small></span>
                     </button>
                     <button class="choice-card" data-place="veranda">
                         <span class="icon">🌅</span>
-                        <span class="label">베란다<br>(페인트/창틀)</span>
+                        <span class="label">베란다/다용도실<br><small>페인트 벽면, 창틀</small></span>
                     </button>
                     <button class="choice-card" data-place="appliance">
                         <span class="icon">🧺</span>
-                        <span class="label">가전<br>(세탁기/에어컨)</span>
+                        <span class="label">생활 가전<br><small>세탁기 고무패킹, 에어컨</small></span>
                     </button>
                 </div>
             </section>
 
             <section id="step-2" class="step hidden">
-                <h3>Step 2. 현재 어떤 상황인가요?</h3>
+                <div class="step-header">
+                    <span class="step-number">02</span>
+                    <h3>현재 어떤 상황인가요?</h3>
+                </div>
                 <div class="button-group">
-                    <button class="choice-btn" data-situation="condensation">겨울철 결로</button>
+                    <button class="choice-btn" data-situation="condensation">겨울철 결로 현상</button>
                     <button class="choice-btn" data-situation="humidity">여름철 장마 습기</button>
-                    <button class="choice-btn" data-situation="movein">이사/입주 청소</button>
-                    <button class="choice-btn" data-situation="routine">일상 관리 및 예방</button>
+                    <button class="choice-btn" data-situation="movein">이사 및 입주 전후</button>
+                    <button class="choice-btn" data-situation="routine">일상 관리 및 정기 예방</button>
                 </div>
             </section>
 
             <section id="result-area" class="result-section hidden">
                 <div class="result-header">
-                    <h3>✨ 추천 솔루션입니다!</h3>
+                    <h3>🛡️ 맞춤 분석 결과 및 추천 솔루션</h3>
                 </div>
+                
+                <div class="analysis-box">
+                    <h4>원인 분석</h4>
+                    <p id="analysis-text"><!-- JS로 채워짐 --></p>
+                </div>
+
                 <div id="product-result" class="product-info">
                     <!-- JS로 채워질 영역 -->
                 </div>
-                <div class="expert-tips">
-                    <h4>💡 전문가의 예방 팁</h4>
-                    <ul id="tip-list">
+
+                <div class="expert-guide">
+                    <h4>📝 전문가의 작업 가이드</h4>
+                    <div id="guide-content" class="guide-text">
                         <!-- JS로 채워질 영역 -->
+                    </div>
+                </div>
+
+                <div class="safety-precaution">
+                    <h4>⚠️ 안전 주의사항</h4>
+                    <ul>
+                        <li>작업 전 반드시 고무장갑과 마스크를 착용하세요.</li>
+                        <li>락스 성분 제품 사용 시 창문을 열어 충분히 환기하세요.</li>
+                        <li>다른 세제(특히 산성 세제)와 절대 섞어 쓰지 마세요.</li>
                     </ul>
                 </div>
-                <button class="reset-btn" id="reset-btn">다시 선택하기</button>
+
+                <button class="reset-btn" id="reset-btn">다른 장소 선택하기</button>
             </section>
         </main>
 
-        <div class="inquiry-section">
-            <h3>전문 시공 및 제휴 문의</h3>
-            <p>직접 해결하기 어려운 심각한 곰팡이 문제는 전문가의 도움을 받으세요.</p>
+        <section id="encyclopedia" class="info-section">
+            <div class="section-title">
+                <h2>곰팡이 백과사전</h2>
+                <p>알아야 제대로 없앨 수 있습니다.</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>왜 곰팡이가 생기나요?</h4>
+                    <p>곰팡이는 온도(20~30도), 습도(60% 이상), 영양분(먼지, 벽지 등)의 세 가지 조건이 맞을 때 발생합니다. 특히 한국 주거 환경에서는 겨울철 결로와 여름철 장마가 주원인입니다.</p>
+                </div>
+                <div class="info-card">
+                    <h4>결로 현상이란?</h4>
+                    <p>실내외 온도 차이가 클 때 차가운 벽면에 물방울이 맺히는 현상입니다. 이 물기가 벽지에 스며들면 곰팡이가 번식하기 가장 좋은 환경이 됩니다.</p>
+                </div>
+                <div class="info-card">
+                    <h4>환기의 정석</h4>
+                    <p>하루 최소 3번, 30분씩 마주 보는 창문을 모두 열어 '맞바람 환기'를 하는 것이 가장 효과적입니다. 미세먼지가 심한 날에도 짧게라도 환기하는 것이 좋습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="inquiry" class="inquiry-section">
+            <h3>전문 시공 상담 및 제휴 문의</h3>
+            <p>셀프 해결이 어려운 대규모 곰팡이 문제는 전문 시공팀의 진단이 필요합니다.</p>
             <form action="https://formspree.io/f/mqewyjdj" method="POST" id="inquiry-form">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="성함 또는 업체명" required>
-                    <input type="email" name="email" placeholder="회신받을 이메일" required>
+                    <input type="text" name="name" placeholder="성함 또는 업체명" required aria-label="성함">
+                    <input type="email" name="email" placeholder="회신받을 이메일" required aria-label="이메일">
                 </div>
-                <input type="text" name="subject" placeholder="문의 제목 (예: 화장실 시공 문의)" required style="margin-bottom: 10px;">
-                <textarea name="message" rows="4" placeholder="곰팡이 상태와 지역 등을 상세히 적어주시면 확인 후 연락드릴게요..." required></textarea>
-                <button type="submit" class="submit-btn">상담 요청하기</button>
+                <input type="text" name="subject" placeholder="문의 제목 (예: 아파트 베란다 곰팡이 시공 문의)" required style="margin-bottom: 10px;" aria-label="제목">
+                <textarea name="message" rows="5" placeholder="현장 상태(장소, 면적 등)를 상세히 적어주시면 더 정확한 상담이 가능합니다." required aria-label="내용"></textarea>
+                <button type="submit" class="submit-btn">전문 상담 신청하기</button>
             </form>
-        </div>
+        </section>
 
         <div class="comments-section">
-            <h3>해결 후기 공유</h3>
+            <h3>사용자 리얼 후기</h3>
             <div id="disqus_thread"></div>
-            <script>
-                (function() {
-                var d = document, s = d.createElement('script');
-                s.src = 'https://bulider.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
         </div>
     </div>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h4>🛡️ Mold Master</h4>
+                <p>곰팡이 해결사는 건강한 주거 문화를 지향하는 전문 정보 큐레이션 사이트입니다.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/privacy.html">개인정보처리방침</a></li>
+                    <li><a href="/terms.html">이용약관</a></li>
+                    <li><a href="/about.html">운영팀 소개</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mold Master. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script src="main.js"></script>
+    <script>
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://bulider.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
 </body>
 </html>
