@@ -58,14 +58,15 @@
         </div>
 
         <div class="inquiry-section">
-            <h3>메시지 보내기</h3>
+            <h3>비즈니스 제휴 문의</h3>
             <form action="https://formspree.io/f/mqewyjdj" method="POST" id="inquiry-form">
                 <div class="input-group">
-                    <input type="text" name="name" placeholder="이름" required>
-                    <input type="email" name="email" placeholder="이메일" required>
+                    <input type="text" name="name" placeholder="성함 또는 업체명" required>
+                    <input type="email" name="email" placeholder="회신받을 이메일" required>
                 </div>
-                <textarea name="message" rows="3" placeholder="당신의 행운 이야기를 들려주세요..." required></textarea>
-                <button type="submit" class="submit-btn">사랑을 담아 보내기</button>
+                <input type="text" name="subject" placeholder="문의 제목" required style="margin-bottom: 10px;">
+                <textarea name="message" rows="4" placeholder="제휴 제안이나 문의 내용을 상세히 적어주시면 샤오린이 확인 후 연락드릴게요..." required></textarea>
+                <button type="submit" class="submit-btn">정성을 다해 제안하기</button>
             </form>
         </div>
     </div>
