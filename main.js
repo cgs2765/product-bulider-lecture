@@ -8,7 +8,7 @@ const themeToggle = document.getElementById('theme-toggle');
 
 let drawCount = 0;
 
-// Soft Pastel Colors for balls
+// 공 색상 - 부드러운 파스텔 톤
 const COLORS = {
     yellow: '#fef08a',
     blue: '#bfdbfe',
@@ -28,7 +28,7 @@ const getNumberColor = (number) => {
 const updateStats = () => {
     drawCount++;
     drawCountSpan.textContent = drawCount;
-    // Magic score between 80-100 for Shaolin
+    // 샤오린님을 위한 높은 행운 지수 (80-100)
     const score = Math.floor(Math.random() * 21) + 80; 
     luckyScoreSpan.textContent = score;
 };
@@ -40,7 +40,8 @@ const addToHistory = (numbers) => {
     const li = document.createElement('li');
     li.classList.add('history-item');
     
-    const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    // 한국 시간 형식으로 표시
+    const time = new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' });
     
     let numbersHtml = '<div class="history-numbers" style="display: flex; gap: 4px;">';
     numbers.forEach(num => {
@@ -86,7 +87,7 @@ const startDraw = () => {
     });
 };
 
-// Theme Toggle
+// 테마 변경 로직
 const updateThemeIcon = (theme) => {
     themeToggle.textContent = theme === 'dark' ? '✨' : '🌸';
 };

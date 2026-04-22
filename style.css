@@ -28,7 +28,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Noto Sans KR', 'Poppins', sans-serif;
     background-color: var(--bg-color);
     display: flex;
     justify-content: center;
