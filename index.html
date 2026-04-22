@@ -5,94 +5,99 @@
     <meta name="google-adsense-account" content="ca-pub-6088674674134375">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>샤오린의 행운 로또</title>
+    <title>곰팡이 해결사 (Mold Master) - 맞춤 솔루션 추천</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+    <div class="background-decor">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
     </div>
     <div class="container">
         <header>
-            <button class="theme-toggle" id="theme-toggle" aria-label="테마 변경">🌸</button>
-            <h2 class="welcome-text">샤오린을 위한 최고의 행운</h2>
-            <h1>샤오린의 <span>행운 로또</span></h1>
-            <div class="stats-bar">
-                <div class="stat-item">추첨 횟수: <span id="draw-count">0</span></div>
-                <div class="stat-item">행운 지수: <span id="lucky-score">0</span>%</div>
-            </div>
+            <div class="logo">🛡️ Mold Master</div>
+            <h2 class="welcome-text">곰팡이 고민, 전문가의 추천으로 해결하세요</h2>
+            <h1>곰팡이 <span>해결사</span></h1>
         </header>
 
-        <div class="machine-container">
-            <div class="machine-drum" id="machine-drum">
-                <!-- 드럼 안의 장식용 공들 -->
-                <div class="inner-ball" style="--delay: 0.1s; --top: 20%; --left: 30%;"></div>
-                <div class="inner-ball" style="--delay: 0.5s; --top: 50%; --left: 60%;"></div>
-                <div class="inner-ball" style="--delay: 0.3s; --top: 70%; --left: 20%;"></div>
-                <div class="inner-ball" style="--delay: 0.8s; --top: 30%; --left: 70%;"></div>
-                <div class="inner-ball" style="--delay: 0.2s; --top: 60%; --left: 40%;"></div>
-            </div>
-            <div class="machine-heart">💖</div>
-            <div class="machine-exit"></div>
-        </div>
+        <main class="recommendation-engine">
+            <section id="step-1" class="step">
+                <h3>Step 1. 어디에 곰팡이가 생겼나요?</h3>
+                <div class="card-grid">
+                    <button class="choice-card" data-place="bathroom">
+                        <span class="icon">🚿</span>
+                        <span class="label">화장실<br>(타일/실리콘)</span>
+                    </button>
+                    <button class="choice-card" data-place="wallpaper">
+                        <span class="icon">🏠</span>
+                        <span class="label">거실/방<br>(벽지/벽면)</span>
+                    </button>
+                    <button class="choice-card" data-place="veranda">
+                        <span class="icon">🌅</span>
+                        <span class="label">베란다<br>(페인트/창틀)</span>
+                    </button>
+                    <button class="choice-card" data-place="appliance">
+                        <span class="icon">🧺</span>
+                        <span class="label">가전<br>(세탁기/에어컨)</span>
+                    </button>
+                </div>
+            </section>
 
-        <div class="number-display" id="number-display">
-            <div class="placeholder-text">샤오린의 행운을 클릭하세요!</div>
-        </div>
+            <section id="step-2" class="step hidden">
+                <h3>Step 2. 현재 어떤 상황인가요?</h3>
+                <div class="button-group">
+                    <button class="choice-btn" data-situation="condensation">겨울철 결로</button>
+                    <button class="choice-btn" data-situation="humidity">여름철 장마 습기</button>
+                    <button class="choice-btn" data-situation="movein">이사/입주 청소</button>
+                    <button class="choice-btn" data-situation="routine">일상 관리 및 예방</button>
+                </div>
+            </section>
 
-        <div class="controls">
-            <button class="generate-btn" id="generate-btn">
-                <span class="btn-text">행운의 번호 추출하기</span>
-                <span class="btn-icon">✨</span>
-            </button>
-        </div>
-
-        <div class="history-section">
-            <h3>최근의 기록</h3>
-            <ul id="history-list">
-                <li class="empty-msg">아직 행운의 기록이 없어요</li>
-            </ul>
-        </div>
+            <section id="result-area" class="result-section hidden">
+                <div class="result-header">
+                    <h3>✨ 추천 솔루션입니다!</h3>
+                </div>
+                <div id="product-result" class="product-info">
+                    <!-- JS로 채워질 영역 -->
+                </div>
+                <div class="expert-tips">
+                    <h4>💡 전문가의 예방 팁</h4>
+                    <ul id="tip-list">
+                        <!-- JS로 채워질 영역 -->
+                    </ul>
+                </div>
+                <button class="reset-btn" id="reset-btn">다시 선택하기</button>
+            </section>
+        </main>
 
         <div class="inquiry-section">
-            <h3>비즈니스 제휴 문의</h3>
+            <h3>전문 시공 및 제휴 문의</h3>
+            <p>직접 해결하기 어려운 심각한 곰팡이 문제는 전문가의 도움을 받으세요.</p>
             <form action="https://formspree.io/f/mqewyjdj" method="POST" id="inquiry-form">
                 <div class="input-group">
                     <input type="text" name="name" placeholder="성함 또는 업체명" required>
                     <input type="email" name="email" placeholder="회신받을 이메일" required>
                 </div>
-                <input type="text" name="subject" placeholder="문의 제목" required style="margin-bottom: 10px;">
-                <textarea name="message" rows="4" placeholder="제휴 제안이나 문의 내용을 상세히 적어주시면 샤오린이 확인 후 연락드릴게요..." required></textarea>
-                <button type="submit" class="submit-btn">정성을 다해 제안하기</button>
+                <input type="text" name="subject" placeholder="문의 제목 (예: 화장실 시공 문의)" required style="margin-bottom: 10px;">
+                <textarea name="message" rows="4" placeholder="곰팡이 상태와 지역 등을 상세히 적어주시면 확인 후 연락드릴게요..." required></textarea>
+                <button type="submit" class="submit-btn">상담 요청하기</button>
             </form>
         </div>
 
         <div class="comments-section">
-            <h3>응원의 한마디</h3>
+            <h3>해결 후기 공유</h3>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://bulider.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
     </div>
     <script src="main.js"></script>
