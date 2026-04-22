@@ -4,14 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lotto Number Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
     <div class="container">
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌞</button>
-        <h1>Lotto Number Generator</h1>
-        <div class="number-display"></div>
-        <button class="generate-btn">Generate Numbers</button>
+        <header>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌞</button>
+            <h1>Lotto <span>Master</span></h1>
+            <div class="stats-bar">
+                <div class="stat-item">Draws: <span id="draw-count">0</span></div>
+                <div class="stat-item">Lucky Score: <span id="lucky-score">0</span>%</div>
+            </div>
+        </header>
+
+        <div class="machine-container">
+            <div class="machine-drum" id="machine-drum">
+                <!-- Decorative balls inside the drum -->
+                <div class="inner-ball" style="--delay: 0.1s; --top: 20%; --left: 30%;"></div>
+                <div class="inner-ball" style="--delay: 0.5s; --top: 50%; --left: 60%;"></div>
+                <div class="inner-ball" style="--delay: 0.3s; --top: 70%; --left: 20%;"></div>
+                <div class="inner-ball" style="--delay: 0.8s; --top: 30%; --left: 70%;"></div>
+                <div class="inner-ball" style="--delay: 0.2s; --top: 60%; --left: 40%;"></div>
+            </div>
+            <div class="machine-exit"></div>
+        </div>
+
+        <div class="number-display" id="number-display">
+            <div class="placeholder-text">Ready to draw?</div>
+        </div>
+
+        <div class="controls">
+            <button class="generate-btn" id="generate-btn">
+                <span class="btn-text">Start Drawing!</span>
+                <span class="btn-icon">🕹️</span>
+            </button>
+        </div>
+
+        <div class="history-section">
+            <h3>Recent History</h3>
+            <ul id="history-list">
+                <li class="empty-msg">No history yet</li>
+            </ul>
+        </div>
+
+        <div class="inquiry-section">
+            <h3>Affiliate Inquiry</h3>
+            <form action="https://formspree.io/f/mqewyjdj" method="POST" id="inquiry-form">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" rows="3" placeholder="How can we help you?" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
