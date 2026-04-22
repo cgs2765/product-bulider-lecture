@@ -194,13 +194,17 @@ h1 span { color: var(--accent-color); }
 }
 
 /* 섹션 디자인 */
-.history-section, .inquiry-section {
+.history-section, .inquiry-section, .comments-section {
     margin-top: 35px;
     text-align: left;
     border-top: 2px dashed var(--accent-secondary);
     padding-top: 25px;
 }
 h3 { font-size: 1rem; color: var(--text-color); margin-bottom: 15px; font-weight: 700; }
+
+.comments-section {
+    min-height: 300px;
+}
 
 input, textarea {
     width: 100%;
